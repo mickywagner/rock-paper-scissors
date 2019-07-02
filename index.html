@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <script>
+        function computerPlay() {
+            let randomPRS = Math.floor(Math.random()*3) + 1;
+            if(randomPRS == 1) {
+                return 'Rock';
+            } else if (randomPRS == 2) {
+                return 'Scissors';
+            } else {
+                return 'Paper';
+            }
+        }
+
+        function playRound(playerSelection, computerSelection) {
+            playerSelection = prompt('Paper, rock, scissors?').toLowerCase();
+            computerSelection = computerPlay().toLowerCase();
+            let computerScore;
+            let playerScore;
+
+            // console.log(playerSelection);
+            // console.log(computerSelection);
+
+            if(computerSelection === 'rock' && playerSelection === 'scissors') {
+                alert ("You Lose! Rock beats scissors!");
+                computerScore++;
+            } else if(computerSelection === 'paper' && playerSelection === 'rock') {
+                alert ("You Lose! Paper beats rock!");
+                computerScore++;
+            } else if(computerSelection === 'scissors' && playerSelection === 'paper') {
+                alert ("You Lose! Scissors beats paper!");
+                computerScore++;
+            } else if(computerSelection === playerSelection) {
+                alert ("Draw!");
+            } else {
+                alert ("Yay! You win!");
+                playerScore++;
+            }  
+
+            console.log(playerScore);
+            console.log(computerScore);
+        }
+
+        function game() {
+            playRound();
+        }
+
+        game();
+
+        
+    </script>
+</body>
+</html>
