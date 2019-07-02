@@ -8,6 +8,9 @@
 </head>
 <body>
     <script>
+        let computerScore = 0;
+        let playerScore = 0;
+
         function computerPlay() {
             let randomPRS = Math.floor(Math.random()*3) + 1;
             if(randomPRS == 1) {
@@ -22,8 +25,6 @@
         function playRound(playerSelection, computerSelection) {
             playerSelection = prompt('Paper, rock, scissors?').toLowerCase();
             computerSelection = computerPlay().toLowerCase();
-            let computerScore;
-            let playerScore;
 
             // console.log(playerSelection);
             // console.log(computerSelection);
@@ -50,6 +51,17 @@
 
         function game() {
             playRound();
+            playRound();
+            playRound();
+            playRound();
+            playRound();
+            if(playerScore > computerScore) {
+                alert("Congratulations you beat the computer " + playerScore + " to " + computerScore + "!")
+            } else if (computerScore > playerScore) {
+                alert("You lost! The computer beat you " + computerScore + " to " + playerScore + ". Better luck next time!")
+            } else (
+                alert ("Looks like it's a draw.")
+            )
         }
 
         game();
