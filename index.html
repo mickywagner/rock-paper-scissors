@@ -26,6 +26,12 @@
             playerSelection = prompt('Paper, rock, scissors?').toLowerCase();
             computerSelection = computerPlay().toLowerCase();
 
+            let regex = /\b(rock|paper|scissors)\b/i;
+            if (!regex.test(playerSelection)) { 
+                alert("Please choose a valid option");
+                playerSelection = prompt('Paper, rock, scissors?').toLowerCase(); 
+            }
+
             // console.log(playerSelection);
             // console.log(computerSelection);
 
