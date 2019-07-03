@@ -28,10 +28,10 @@
 
             let regex = /\b(rock|paper|scissors)\b/i;
             if (!regex.test(playerSelection)) { 
-                alert("Please choose a valid option");
+                alert('That\'s not a valid option. Choose \'paper\', \'rock\' or \'scissors\'.');
                 playerSelection = prompt('Paper, rock, scissors?').toLowerCase(); 
             }
-
+''
             // console.log(playerSelection);
             // console.log(computerSelection);
 
