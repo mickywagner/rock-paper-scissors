@@ -1,19 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
+        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
     <title>Rock, Paper, Scissors</title>
 </head>
+
 <body>
+    <header>
+        <h1>Paper-Rock-Scissors</h1>
+        <nav><button id="start">Start New Game</button></nav>
+    </header>
+
+    <div class="left">
+        <h2>Choose One: </h2>
+        <ul>
+        <li><i class="fas fa-hand-rock"></i>Paper</li>
+        <li><i class="fas fa-hand-paper"></i>Rock</li> 
+        <li><i class="fas fa-hand-scissors"></i>Scissors</li>
+    </ul>
+    <h3>Player Score:</h3>
+    </div>
+    <div class="right">
+        <div>
+
+        </div>
+        <h3>Computer Score: </h3>
+    </div>
+
+    <footer>
+        <p>By Michaela Wagner for Odin Project Course</p>
+    </footer>
+
     <script>
         let computerScore = 0;
         let playerScore = 0;
 
         function computerPlay() {
-            let randomPRS = Math.floor(Math.random()*3) + 1;
-            if(randomPRS == 1) {
+            let randomPRS = Math.floor(Math.random() * 3) + 1;
+            if (randomPRS == 1) {
                 return 'Rock';
             } else if (randomPRS == 2) {
                 return 'Scissors';
@@ -27,29 +56,29 @@
             computerSelection = computerPlay().toLowerCase();
 
             let regex = /\b(rock|paper|scissors)\b/i;
-            if (!regex.test(playerSelection)) { 
+            if (!regex.test(playerSelection)) {
                 alert('That\'s not a valid option. Choose \'paper\', \'rock\' or \'scissors\'.');
-                playerSelection = prompt('Paper, rock, scissors?').toLowerCase(); 
+                playerSelection = prompt('Paper, rock, scissors?').toLowerCase();
             }
-''
+            ''
             // console.log(playerSelection);
             // console.log(computerSelection);
 
-            if(computerSelection === 'rock' && playerSelection === 'scissors') {
-                alert ("You Lose! Rock beats scissors!");
+            if (computerSelection === 'rock' && playerSelection === 'scissors') {
+                alert("You Lose! Rock beats scissors!");
                 computerScore++;
-            } else if(computerSelection === 'paper' && playerSelection === 'rock') {
-                alert ("You Lose! Paper beats rock!");
+            } else if (computerSelection === 'paper' && playerSelection === 'rock') {
+                alert("You Lose! Paper beats rock!");
                 computerScore++;
-            } else if(computerSelection === 'scissors' && playerSelection === 'paper') {
-                alert ("You Lose! Scissors beats paper!");
+            } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
+                alert("You Lose! Scissors beats paper!");
                 computerScore++;
-            } else if(computerSelection === playerSelection) {
-                alert ("Draw!");
+            } else if (computerSelection === playerSelection) {
+                alert("Draw!");
             } else {
-                alert ("Yay! You win!");
+                alert("Yay! You win!");
                 playerScore++;
-            }  
+            }
 
             console.log(playerScore);
             console.log(computerScore);
@@ -61,18 +90,22 @@
             playRound();
             playRound();
             playRound();
-            if(playerScore > computerScore) {
+            if (playerScore > computerScore) {
                 alert("Congratulations you beat the computer " + playerScore + " to " + computerScore + "!")
             } else if (computerScore > playerScore) {
                 alert("You lost! The computer beat you " + computerScore + " to " + playerScore + ". Better luck next time!")
             } else {
-                alert ("Looks like it's a draw.")
+                alert("Looks like it's a draw.")
             }
         }
 
-        game();
+        const startBtn = document.querySelector('#start')
+        startBtn.addEventListener('click', game)
 
-        
+
+
+
     </script>
 </body>
+
 </html>
