@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#page-container {
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-areas: "head head"
+                         "left  right"
+                         "foot  foot";
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-columns: 1fr 1fr;
+}
+
+#page-container > header {
+    grid-area: head;
+    background-color: skyblue;
+}
+
+#page-container > div.left {
+    grid-area: left;
+    background-color: aliceblue;
+}
+
+#page-container > div.right {
+    grid-area: right;
+    background-color: blueviolet;
+}
+
+#page-container > footer {
+    grid-area: foot;
+    background-color: skyblue;
+
+}
