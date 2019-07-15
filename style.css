@@ -1,36 +1,135 @@
-*{
+@import url('https://fonts.googleapis.com/css?family=Rock+Salt&display=swap');
+
+* {
     margin: 0;
     box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
 }
+
+/* Grid */
 
 #page-container {
     display: grid;
     width: 100%;
     height: 100vh;
+    min-height: 600px;
     grid-template-areas: "head head"
                          "left  right"
                          "foot  foot";
-    grid-template-rows: 100px 1fr 50px;
+    grid-template-rows: 55px 1fr 25px;
     grid-template-columns: 1fr 1fr;
 }
 
 #page-container > header {
     grid-area: head;
     background-color: skyblue;
+    padding: 5px;
+    display: flex;
 }
 
 #page-container > div.left {
     grid-area: left;
     background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
 }
 
 #page-container > div.right {
     grid-area: right;
-    background-color: blueviolet;
+    background-color: violet;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #page-container > footer {
     grid-area: foot;
     background-color: skyblue;
 
+}
+
+/* Header */
+
+h1 {
+    flex: 2;
+    font-size: 1.25em;
+    margin-right: 50px;
+    margin-left: 10px;
+    font-family: 'Rock Salt', cursive;
+}
+
+#start {
+    flex: 1;
+    font-size: 1em;
+}
+
+/* Left Side - Player */
+
+/* List */
+
+ul {
+    list-style-type: none;
+    text-align: center;
+    flex: 1;
+}
+
+li {
+    padding: 10px;
+}
+
+/* Icons */
+
+i {
+    font-size: 6em;
+    padding: 20px;
+}
+
+.fa-hand-rock {
+    color: violet;
+}
+
+.fa-hand-rock:hover {
+    border: 5px solid violet;
+    border-radius: 5px;
+}
+
+.fa-hand-paper {
+    color: skyblue;
+}
+
+.fa-hand-paper:hover {
+    border: 5px solid skyblue;
+    border-radius: 5px;
+}
+
+.fa-hand-scissors {
+    color: blueviolet;
+}
+
+.fa-hand-scissors:hover {
+    border: 5px solid blueviolet;
+    border-radius: 5px;
+}
+
+/* Right Side - Computer */
+.comp-choice {
+    flex: 1;
+    height: 100px;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 150px;
+}
+
+.comp {
+    font-size: 10em;
+}
+/* Footer */
+
+footer p {
+    text-align: center;
+    padding: 5px;
+    font-family: 'Rock Salt', cursive;
+    font-size: 0.5em;
+    letter-spacing: 0.4em;
 }
