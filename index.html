@@ -19,23 +19,21 @@
         </header>
 
         <div class="left">
-            <ul>
-                <li id="1"><i class="fas fa-hand-rock"></i></li>
-                <li id="2"><i class="fas fa-hand-paper"></i></li>
-                <li id="3"><i class="fas fa-hand-scissors"></i></li>
-            </ul>
+                <ul>
+                    <li><button id="1"><i class="fas fa-hand-rock"></i></button></li>
+                    <li><button id="2"><i class="fas fa-hand-paper"></i></button></li>
+                    <li><button id="3"><i class="fas fa-hand-scissors"></i></button></li>
+                </ul> 
             <div>
                 <h3 id="playerScore">Player Score: 0</h3>
             </div>
         </div>
         <div class="right">
             <div class="comp-choice">
-
                 <ul>
-                    <li><i class="fas fa-hand-rock white"></i></li>
-                    <li"><i class="fas fa-hand-paper white"></i></li>
-                    <li><i class="fas fa-hand-scissors white"></i></li>
-
+                    <li><i class="fas fa-hand-rock"></i></li>
+                    <li><i class="fas fa-hand-paper"></i></li>
+                    <li><i class="fas fa-hand-scissors"></i></li>
                 </ul>
             </div>
             <div>
@@ -60,9 +58,9 @@
             if (randomPRS == 1) {
                 return 'Rock';
             } else if (randomPRS == 2) {
-                return 'Scissors';
-            } else {
                 return 'Paper';
+            } else {
+                return 'Scissors';
             }
         }
 

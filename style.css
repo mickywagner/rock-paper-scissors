@@ -75,7 +75,13 @@ ul {
 }
 
 li {
-    padding: 10px;
+    padding: 10px 0px;
+}
+
+li button {
+    height: 150px;
+    width: 150px;
+    background:#d2e4f5;
 }
 
 /* Icons */
@@ -89,27 +95,12 @@ i {
     color: violet;
 }
 
-.fa-hand-rock:hover {
-    border: 5px solid violet;
-    border-radius: 5px;
-}
-
 .fa-hand-paper {
     color: skyblue;
 }
 
-.fa-hand-paper:hover {
-    border: 5px solid skyblue;
-    border-radius: 5px;
-}
-
 .fa-hand-scissors {
     color: blueviolet;
-}
-
-.fa-hand-scissors:hover {
-    border: 5px solid blueviolet;
-    border-radius: 5px;
 }
 
 /* Right Side - Computer */
