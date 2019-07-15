@@ -1,59 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css"
-        integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css" type="text/css">
-    <title>Rock, Paper, Scissors</title>
-</head>
-
-<body>
-    <div id="page-container">
-        <header>
-            <h1>Paper-Rock-Scissors</h1>
-            <button id="start">Start New Game</button>
-        </header>
-
-        <div class="left">
-            <ul>
-                <li id="1"><i class="fas fa-hand-rock"></i></li>
-                <li id="2"><i class="fas fa-hand-paper"></i></li>
-                <li id="3"><i class="fas fa-hand-scissors"></i></li>
-            </ul>
-            <div>
-                <h3 id="playerScore">Player Score: 0</h3>
-            </div>
-        </div>
-        <div class="right">
-            <div class="comp-choice">
-
-                <ul>
-                    <li><i class="fas fa-hand-rock white"></i></li>
-                    <li"><i class="fas fa-hand-paper white"></i></li>
-                    <li><i class="fas fa-hand-scissors white"></i></li>
-
-                </ul>
-            </div>
-            <div>
-                <h3 id="compScore">Computer Score: 0</h3>
-            </div>
-        </div>
-
-        <footer>
-            <p>By: Michaela Wagner (for Odin Project Web Dev Course)</p>
-        </footer>
-    </div>
-
-    <script>
+<script>
         let computerScore = 0;
         let playerScore = 0;
-
-        let compScoreCount = document.querySelector('#compScore');
-        let playScoreCount = document.querySelector('#playerScore')
 
         function computerPlay() {
             let randomPRS = Math.floor(Math.random() * 3) + 1;
@@ -95,17 +42,11 @@
                 playerScore++;
             }
 
-            compScoreCount.textContent = "Computer Score: " + computerScore
-            playScoreCount.textContent = "Player Score: " + playerScore
-
+            console.log(playerScore);
+            console.log(computerScore);
         }
 
-
-
-
         function game() {
-            compScoreCount.textContent = "Computer Score: " + computerScore
-            playScoreCount.textContent = "Player Score: " + playerScore
             playRound();
             playRound();
             playRound();
@@ -127,6 +68,3 @@
 
 
     </script>
-</body>
-
-</html>
