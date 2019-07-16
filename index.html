@@ -19,21 +19,24 @@
         </header>
 
         <div class="left">
-                <ul>
-                    <li><button id="rock" class="choice"><i class="fas fa-hand-rock"></i></button></li>
-                    <li><button id="paper" class="choice"><i class="fas fa-hand-paper"></i></button></li>
-                    <li><button id="scissors" class="choice"><i class="fas fa-hand-scissors"></i></button></li>
-                </ul> 
+            <ul>
+                <li><button id="rock" class="choice ripple"><i class="fas fa-hand-rock"></i></button></li>
+                <li><button id="paper" class="choice ripple"><i class="fas fa-hand-paper"></i></button></li>
+                <li><button id="scissors" class="choice ripple"><i class="fas fa-hand-scissors"></i></button></li>
+            </ul>
             <div>
                 <h3 id="playerScore">Player Score: 0</h3>
             </div>
         </div>
         <div class="right">
+            <div>
+                <h3>Computer:</h3>
+            </div>
             <div class="comp-choice">
                 <ul>
-                    <li><i class="fas fa-hand-rock"></i></li>
-                    <li><i class="fas fa-hand-paper"></i></li>
-                    <li><i class="fas fa-hand-scissors"></i></li>
+                    <li id="compR"><i class="fas fa-hand-rock"></i></li>
+                    <li id="compP"><i class="fas fa-hand-paper"></i></li>
+                    <li id="compS"><i class="fas fa-hand-scissors"></i></li>
                 </ul>
             </div>
             <div>
@@ -46,64 +49,7 @@
         </footer>
     </div>
 
-    <script>
-        let computerScore = 0;
-        let playerScore = 0;
-        let compScoreCount = document.querySelector('#compScore');
-        let playScoreCount = document.querySelector('#playerScore')
-
-        function computerPlay() {
-            let randomPRS = Math.floor(Math.random() * 3) + 1;
-            if (randomPRS == 1) {
-                return 'rock';
-            } else if (randomPRS == 2) {
-                return 'paper';
-            } else {
-                return 'scissors';
-            }
-        }
-
-        
-        function playRound(playerSelection, computerSelection) {
-            let buttons = document.querySelectorAll('.choice');
-            buttons.forEach(button => button.addEventListener('click', function(e) {
-                playerSelection = e.target.id // make whole area work 
-                computerSelection = computerPlay()
-                console.log('You chose: ' + playerSelection)
-                console.log('Computer chose: ' + computerSelection)
-                if (computerSelection === 'rock' && playerSelection === 'scissors') {
-                computerScore++;
-            } else if (computerSelection === 'paper' && playerSelection === 'rock') {
-                computerScore++;
-            } else if (computerSelection === 'scissors' && playerSelection === 'paper') {
-                computerScore++;
-            } else if (computerSelection === playerSelection) {
-            } else {
-                playerScore++;
-            }
-
-            console.log(playerScore)
-            console.log(computerScore)
-        
-            compScoreCount.textContent = "Computer Score: " + computerScore
-            playScoreCount.textContent = "Player Score: " + playerScore
-            }))
-        }
-
-        function game() {
-            if (playerScore > computerScore) {
-                alert("Congratulations you beat the computer " + playerScore + " to " + computerScore + "!")
-            } else if (computerScore > playerScore) {
-                alert("You lost! The computer beat you " + computerScore + " to " + playerScore + ". Better luck next time!")
-            } else {
-                alert("Looks like it's a draw.")
-            }
-        }
-
-        const startBtn = document.querySelector('#start')
-        startBtn.addEventListener('click', playRound)
-
-
+    <script src="script.js"> 
     </script>
 </body>
 

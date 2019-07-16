@@ -84,6 +84,24 @@ li button {
     background:#d2e4f5;
 }
 
+li button:focus {
+    outline:0;
+}
+
+button.ripple {
+    background-position: center;
+    transition: background 0.8s;
+  }
+
+button.ripple:hover {
+    background: #5ab5ff radial-gradient(circle, transparent 1%, #5ab5ff 1%) center/15000%;
+  }
+button.ripple:active {
+    background-color: #b5d8f5;
+    background-size: 100%;
+    transition: background 0s;
+  }
+
 /* Icons */
 
 i {
@@ -109,10 +127,21 @@ i {
     margin: 0 auto;
 }
 
-.comp-choice i {
-    font-size: 6em;
-    padding: 15px;
+.comp-choice li {
+    padding: 5px 50px;
+    margin: 0px 0px 20px 0px;
 }
+
+.comp-choice i {
+    font-size: 5.5em;
+}
+
+.border {
+    border: 1px solid skyblue;
+    border-radius: 12px;
+    background: #d2e4f5;
+}
+
 /* Footer */
 
 footer p {
