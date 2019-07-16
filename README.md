@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # rock-paper-scissors - Created for Odin Project Web Development Course
 
 <ol>
@@ -8,6 +7,7 @@
 <ol>
 
 <img src="GameInterface.png">
+
 =======
 
 # Simple JavaScript Rock-Paper-Scissor Game
