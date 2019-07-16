@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # rock-paper-scissors - Created for Odin Project Web Development Course
 
 <ol>
@@ -7,3 +8,10 @@
 <ol>
 
 <img src="GameInterface.png">
+=======
+# Simple JavaScript Rock-Paper-Scissor Game
+
+1. Played against computer in console. Winner declared after 5 rounds.
+2. Practice using functions
+
+>>>>>>> d7459fcb77f4c8f30b4127b1b519976698358dbb
