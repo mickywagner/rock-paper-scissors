@@ -1,11 +1,11 @@
-JavaScript Rock-Paper-Scissors
+# Javascript Rock-Paper-Scissors
 
 <h3>Screenshots</h3>
 <img src="GameInterface.png">
 
 <h3>About This Project</h3>
 
-<p>This project was part of the Fullstack Javascript track, specifically the introductory Web Development course on <a href="https://www.theodinproject.com/">Odin Project</a>. The idea was to implement a console based tic-tac-toe game (I addded the UI for fun) to practice using Javascript fundamentals, the Developer Console, and version control with Git. 
+<p>This project was part of the Fullstack Javascript track, specifically the introductory Web Development course on <a href="https://www.theodinproject.com/">Odin Project</a>. The idea was to implement a console based tic-tac-toe game (I addded the UI for fun) to practice using Javascript fundamentals, the Developer Console, and version control with Git. You play against the computer, first one to five points wins. Play the game <a href="https://mickywagner.github.io/rock-paper-scissors/">here</a>.
 </p>
 <p>You can see the full project brief <a href="https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors">here</a>.</p>
 
