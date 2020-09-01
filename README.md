@@ -1,15 +1,23 @@
-Simple JavaScript Rock-Paper-Scissors - Created for Odin Project Web Development Course
+JavaScript Rock-Paper-Scissors
 
-<ol>
-<li>Lanuguages: HTML, CSS, JavaScript</li>
-<li>Original Script uses JavaScript only. Game is played only through browser prompts.
-  1. Played against computer in console. Winner declared after 5 rounds.
-  2. Practice using functions
-</li>
-<li>Final version adds front-end user interface</li>
-<ol>
-<br>
+<h3>Screenshots</h3>
 <img src="GameInterface.png">
+
+<h3>About This Project</h3>
+
+<p>This project was part of the Fullstack Javascript track, specifically the introductory Web Development course on <a href="https://www.theodinproject.com/">Odin Project</a>. The idea was to implement a console based tic-tac-toe game (I addded the UI for fun) to practice using Javascript fundamentals, the Developer Console, and version control with Git. 
+</p>
+<p>You can see the full project brief <a href="https://www.theodinproject.com/courses/web-development-101/lessons/rock-paper-scissors">here</a>.</p>
+
+<h3>Technical Sheet</h3>
+<ul>
+  <li>Javascript</li>
+  <li>HTML 5</li>
+  <li>CSS 3</li>
+</ul>
+
+
+
 
 
 
